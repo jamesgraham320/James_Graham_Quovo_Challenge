@@ -4,6 +4,10 @@ from bs4 import BeautifulSoup
 
 class HoldingsSpider(scrapy.Spider):
     name = "holdings_spider"
+
+    # Change the value after CIK= to search other tickers
+    # Scrapy supports input parameters when running scrapy crawl
+    # So inputting different CIK or list of CIK's to crawl simply involves interpolating into the below string
     start_urls = [
         "https://www.sec.gov/cgi-bin/browse-edgar?CIK=0001166559&Find=Search&owner=exclude&action=getcompany"
     ]

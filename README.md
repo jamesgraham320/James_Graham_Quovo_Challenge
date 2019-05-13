@@ -3,13 +3,14 @@
 ## Instructions
 1. Install package dependencies with command:
 	`pip install -r requirements.txt`
-2. Navigate to folder `quovoCrawler`
+2. Navigate to folder `./quovoCrawler/`
 3. run command: `scrapy crawl holdings_spider`
 4. View output data in file `sec-data.tsv` in same directory
 
 ## Personal Thoughts
-This was my first time using the Scrapy library. Usually I do most work in Javascript but after this I don't think I will ever do web scraping in JS again. I enjoyed the challenge. There's a lot of room for extensibility and customization. You can input any ticker and can change the target download file very easily. I was also unfamiliar with XPATH and it's far mroe efficient for navigating web pages with relative paths as oppsed to hard coded HTML tag names.
+This was my first time using the Scrapy library. Usually I do most work in Javascript but after this I don't think I will ever do web scraping in JS again. I enjoyed the challenge and the opportunity to use a new library. There's a lot of room for extensibility and customization. You can input any ticker and can change the target download file very easily. I was also unfamiliar with XPATH and it's far mroe efficient for navigating web pages with relative paths as oppsed to hard coded HTML tag names. 
 
+The script can adapt to different formats of data because the XML data is parsed generically using tag names as column headers. This script only searches for documents titled "13F-HR" but can be adapted with regex to only find any files titled "13F." The script already finds all "13F-HR" documents but only follows through crawling the first one. It can be adapted to loop through more documents but more work is required to for the crawler to work through the pagination.
 
 ## Assignment Details
 Background:
