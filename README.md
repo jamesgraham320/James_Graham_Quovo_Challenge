@@ -7,10 +7,14 @@
 3. run command: `scrapy crawl holdings_spider`
 4. View output data in file `sec-data.tsv` in same directory
 
-## Personal Thoughts
-This was my first time using the Scrapy library. Usually I do most work in Javascript but after this I don't think I will ever do web scraping in JS again. I enjoyed the challenge and the opportunity to use a new library. There's a lot of room for extensibility and customization. You can input any ticker and can change the target download file very easily. I was also unfamiliar with XPATH and it's far mroe efficient for navigating web pages with relative paths as oppsed to hard coded HTML tag names. 
+Code I have written is in the directory `./quovoCrawler/quovoCrawler/spiders/holdings_spider.py`
 
-The script can adapt to different formats of data because the XML data is parsed generically using tag names as column headers. This script only searches for documents titled "13F-HR" but can be adapted with regex to only find any files titled "13F." The script already finds all "13F-HR" documents but only follows through crawling the first one. It can be adapted to loop through more documents but more work is required to for the crawler to work through the pagination.
+## Personal Thoughts
+This was my first time using the Scrapy library. Usually I do most work in Javascript but after this I don't think I will ever do web scraping in JS again. I enjoyed the challenge and the opportunity to use a new library. There's a lot of room for extensibility and customization. You can input any ticker and can change the target download file very easily. I was also unfamiliar with XPATH but it's far more efficient for navigating web pages with relative paths as oppsed to hard coded HTML tag names. 
+
+The script can adapt to different formats of data because the XML data is parsed generically using tag names as column headers. This script only searches for documents titled "13F-HR" but can be adapted with regex to find any files titled "13F." The script already finds all "13F-HR" documents but only follows through crawling the first one. To retrieve more than the last few documents would require the crawler to travel through the pagination. If more "13F" documents had very different formats you can crawl all of them and generate a master list of column headers before going through the data again and mapping it to said headers.
+
+Mutual fund holding data like this could be used in a number of ways including watching and updating a master list of what top mutual funds are holding. As reports update, you would be able to see when targets change their holdings and what they're buying. You could also use the data to build a picture of which companies have majority holdings.
 
 ## Assignment Details
 Background:
