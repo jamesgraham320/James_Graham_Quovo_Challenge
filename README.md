@@ -1,10 +1,24 @@
+# James Graham - Quovo Submission
+
+## Instructions
+1. Install package dependencies with command:
+	`pip install -r requirements.txt`
+2. Navigate to folder `quovoCrawler`
+3. run command: `scrapy crawl holdings_spider`
+4. View output data in file `sec-data.tsv` in same directory
+
+## Personal Thoughts
+This was my first time using the Scrapy library. Usually I do most work in Javascript but after this I don't think I will ever do web scraping in JS again. I enjoyed the challenge. There's a lot of room for extensibility and customization. You can input any ticker and can change the target download file very easily. I was also unfamiliar with XPATH and it's far mroe efficient for navigating web pages with relative paths as oppsed to hard coded HTML tag names.
+
+
+## Assignment Details
 Background:
 
 People can invest in mutual funds that hold many stocks and bonds. Funds list what they own every quarter, so investors can get a sense of what they are actually exposed to, e.g. a "21st Century Tactical Technology Fund" does not just own 50% AAPL and 50% GOOG. Fund holdings are listed on the SEC website, EDGAR.
 
 Challenge:
 
-Write code in Python that parses fund holdings pulled from EDGAR, given a ticker or CIK, and generates a .tsv file from them. 
+Write code in Python that parses fund holdings pulled from EDGAR, given a ticker or CIK, and generates a .tsv file from them.
 
 Example:
 
